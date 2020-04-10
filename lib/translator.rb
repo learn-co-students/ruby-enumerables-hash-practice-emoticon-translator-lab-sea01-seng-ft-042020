@@ -36,7 +36,7 @@ library.each do |key, value|
     return key
   end
 end
-unless library.include?(emoticon)
+if !library.include?(emoticon)
   return "Sorry, that emoticon was not found"
 end
 end
