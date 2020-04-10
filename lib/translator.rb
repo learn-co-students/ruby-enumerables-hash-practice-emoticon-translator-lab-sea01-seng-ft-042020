@@ -16,7 +16,7 @@ end
 
 def get_japanese_emoticon(path, emoticon)
 library = load_library(path)
-library.select do |key, value|
+library.each do |key, value|
   if emoticon == value[:english]
     return value[:japanese]
   end
@@ -31,7 +31,7 @@ end
 
 def get_english_meaning(path, emoticon)
 library = load_library(path)
-library.select do |key, value|
+library.each do |key, value|
   if emoticon == value[:japanese]
     return key
   end
